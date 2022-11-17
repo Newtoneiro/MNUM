@@ -27,7 +27,7 @@ for value = values
 end
 
 %plotting
-hold on
+hold on, grid on
 
 plot(values, errors_1, '-o')
 plot(values, errors_2, '-o')

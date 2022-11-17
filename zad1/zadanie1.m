@@ -26,8 +26,6 @@ end
 %plotting
 hold on, grid on
 
-%%
-% axis equal
 
 plot(values, errors_1, '-o')
 plot(values, errors_2, '-o')

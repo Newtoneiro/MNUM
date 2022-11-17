@@ -27,13 +27,13 @@ for value = values
 end
 
 %plotting
-hold on
+hold on, grid on
 
 plot(values, times_1, '-o')
 plot(values, times_2, '-o')
 
 title('Zależność czasu wykonania algorytmu od liczby równań n.');
-ylabel('czas - t') 
+ylabel('czas - t(s)') 
 xlabel('liczba równań - n')
 legend('Metoda Jackobiego','Metoda eliminacji Gaussa zcweg.')
 

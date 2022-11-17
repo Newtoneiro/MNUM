@@ -22,6 +22,4 @@ function [X, e, time] = jacobiMethod(delta, generateA, generateB, n)
     e = norm(A*X-b);
 end
 
-%wartosci wlasne, widmo maciwerzy i uklady dynamiczne
-
 
