@@ -1,9 +1,11 @@
-function [x, e] = bisect(f, a, b, delta)
+function [x, e, i, t] = bisect(f, a, b, delta)
     c = f(a); d=f(b);
     %if c*d > 0.0
      %   error('Function has same sign at both endpoints')
     %end
     e = inf;
+    i = 1; % Iteration
+    tic
     while e > delta
         middle = (a + b)/2;
         y = f(middle);
@@ -18,8 +20,10 @@ function [x, e] = bisect(f, a, b, delta)
         else
             a = middle;
         end
-        x = (a + b)/2;
-        e = (b - a)/2;
+        x = middle;
+        e = abs(f(x));
+        i = i + 1;
     end
+    t = toc;
 end
 
